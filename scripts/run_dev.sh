@@ -36,5 +36,5 @@ echo "Running server..."
 if [[ -n "$HTTP_PORT" ]]; then
   sbt -Dhttp.port="$HTTP_PORT" run
 else
-  sbt -Dhttp.port=4560 run
+  sbt -Dhttp.port=9000 run
 fi

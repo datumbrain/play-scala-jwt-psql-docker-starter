@@ -1,0 +1,12 @@
+version: '3'
+services:
+  postgres:
+    container_name: my_db_container
+    restart: always
+    image: postgres
+    environment:
+      POSTGRES_DB: "my_db"
+      POSTGRES_USER: "my_db_user"
+      POSTGRES_PASSWORD: "<your_db_password_here>"
+    ports:
+      - "4559:5432"

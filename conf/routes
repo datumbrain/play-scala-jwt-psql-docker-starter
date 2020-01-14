@@ -1,0 +1,11 @@
+GET         /                             controllers.HomeController.index
+
+POST        /v1/user                      controllers.SignUpController.signUp
+GET         /v1/user/:token/verify        controllers.SignUpController.emailVerification(token: String)
+
+POST        /v1/user/forgot               controllers.ForgotPasswordController.forgotPassword
+POST        /v1/user/:token/reset         controllers.ForgotPasswordController.resetPassword(token: String)
+
+POST        /v1/user/login                controllers.SignInController.signIn
+
+GET         /v1/admin/users               controllers.AdminController.listAll
